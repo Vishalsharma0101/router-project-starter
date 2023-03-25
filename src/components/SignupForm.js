@@ -33,10 +33,10 @@ const SignupForm = ({ setIsLoggedIn }) => {
   return (
     <div>
       <h2>Signup Form</h2>
-      {/* {Student Instrutor tab} */}
+      {/* {Student Instructor tab} */}
       <div>
         <button>Student</button>
-        <button>Instrutor</button>
+        <button>Instructor</button>
       </div>
 
       <form onSubmit={submitHandler}>
@@ -110,11 +110,19 @@ const SignupForm = ({ setIsLoggedIn }) => {
           </label>
         </div>
 
-        <button>Create Account</button>
+        <button type="submit">Create Account</button>
       </form>
     </div>
-
   )
 }
 
-export default SignupForm;
+const Signup = ({ setIsLoggedIn }) => {
+  return (
+    <div>
+      <h1>Signup Page</h1>
+      <SignupForm setIsLoggedIn={setIsLoggedIn} />
+    </div>
+  );
+};
+
+export default Signup;
